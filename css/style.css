@@ -26,3 +26,10 @@ body {
   position: relative;
   text-align: center;
 }
+
+h1 {
+  color: #006699;
+  font-family: "Sue Ellen Francisco", monospace;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
