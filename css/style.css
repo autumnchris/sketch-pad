@@ -65,6 +65,11 @@ button:hover {
   display: inline-block;
 }
 
+.shaded-col {
+  background-color: #333;
+  border: 1px solid #333;
+}
+
 footer {
   background-color: #e6e6e6;
   bottom: 0;
