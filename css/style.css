@@ -34,6 +34,24 @@ h1 {
   text-transform: uppercase;
 }
 
+button,
+button:active,
+button:focus {
+  background-color: #006699;
+  border: 2px solid #006699;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin: 0 3px;
+  padding: 8px;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #006699;
+}
+
 footer {
   background-color: #e6e6e6;
   bottom: 0;
