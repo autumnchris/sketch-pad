@@ -52,6 +52,19 @@ button:hover {
   color: #006699;
 }
 
+#grid {
+  margin: 15px auto 30px;
+}
+
+.row {
+  line-height: 0;
+}
+
+.col {
+  border: 1px solid #e6e6e6;
+  display: inline-block;
+}
+
 footer {
   background-color: #e6e6e6;
   bottom: 0;
