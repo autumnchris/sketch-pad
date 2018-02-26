@@ -41,6 +41,19 @@ document.getElementById('resize').addEventListener('click', function() {
   document.getElementById('modal').setAttribute('style', 'display: block');
 });
 
+document.getElementById('save').addEventListener('click', function() {
+
+  if (document.getElementById('size-input').value.match(/^[0-9]+$/) && document.getElementById('size-input').value >= 4 && document.getElementById('size-input').value <= 60) {
+    document.getElementById('error-message').setAttribute('style', 'display: none');
+    document.getElementById('grid').innerHTML = '';
+    createGrid();
+    document.getElementById('modal').setAttribute('style', 'display: none');
+  }
+  else {
+    document.getElementById('error-message').setAttribute('style', 'display: block');
+  }
+});
+
 document.getElementById('cancel').addEventListener('click', function() {
   document.getElementById('modal').setAttribute('style', 'display: none');
 });
