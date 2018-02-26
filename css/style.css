@@ -57,6 +57,62 @@ button:hover {
   color: #006699;
 }
 
+#modal {
+  background-color: rgba(0,0,0,0.75);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 15% auto;
+  width: 70%;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 2px 10px;
+  text-align: left;
+}
+
+.modal-header h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.modal-body {
+  padding: 25px;
+}
+
+.modal-body input {
+  border: none;
+  border-bottom: 1px solid #333;
+  max-width: 50px;
+}
+
+#error-message {
+  background-color: #fcf8e3;
+  border: 1px solid #faebcc;
+  color: #8a6d3b;
+  display: none;
+  margin: 20px 0;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.modal-footer {
+  border-top: 1px solid #e6e6e6;
+  padding: 10px;
+  text-align: right;
+}
+
 #grid {
   margin: 15px auto 30px;
 }
