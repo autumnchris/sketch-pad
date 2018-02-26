@@ -30,3 +30,9 @@ function createGrid() {
 }
 
 createGrid();
+
+document.getElementById('clear').addEventListener('click', function() {
+  document.querySelectorAll('.col').forEach(function(colStyle) {
+    colStyle.className = 'col';
+  });
+});
