@@ -36,3 +36,7 @@ document.getElementById('clear').addEventListener('click', function() {
     colStyle.className = 'col';
   });
 });
+
+document.getElementById('resize').addEventListener('click', function() {
+  document.getElementById('modal').setAttribute('style', 'display: block');
+});
