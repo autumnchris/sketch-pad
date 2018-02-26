@@ -21,6 +21,8 @@ function createGrid() {
   document.querySelectorAll('.col').forEach(function(colStyle) {
     colStyle.setAttribute('style', 'height: ' + colSize + 'px; width: ' + colSize + 'px;');
   });
+
+  document.getElementById('grid-size').innerHTML = 'Current grid size is ' + numOfSquares + ' x ' + numOfSquares + '.';
 }
 
 createGrid();
