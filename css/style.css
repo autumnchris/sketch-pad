@@ -95,6 +95,7 @@ button:hover {
 .modal-body input {
   border: none;
   border-bottom: 1px solid #333;
+  border-radius: 0;
   max-width: 50px;
 }
 
