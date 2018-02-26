@@ -4,6 +4,13 @@ My project for the [Etch-a-Sketch assignment](https://www.theodinproject.com/cou
 
 ---
 
+## Built With
+* JavaScript
+* CSS3
+* HTML5
+* [Normalize.css](http://necolas.github.io/normalize.css)
+* [Google Fonts](https://fonts.google.com)
+
 ## Demo
 
 View project demo at [https://autumnchris.github.io/sketch-pad](https://autumnchris.github.io/sketch-pad).
