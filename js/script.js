@@ -6,7 +6,7 @@ function createGrid() {
   for (var i = 0; i < numOfSquares; i++) {
     var row = document.createElement('div');
     row.className = 'row';
-    document.getElementById('grid').appendChild(row);
+    document.querySelector('.grid').appendChild(row);
   }
 
   document.querySelectorAll('.row').forEach(function(rows) {
@@ -26,35 +26,35 @@ function createGrid() {
     });
   });
 
-  document.getElementById('grid-size').innerHTML = 'Current grid size is ' + numOfSquares + ' x ' + numOfSquares + '.';
+  document.querySelector('.grid-size').innerHTML = 'Current grid size is ' + numOfSquares + ' x ' + numOfSquares + '.';
 }
 
 createGrid();
 
-document.getElementById('clear').addEventListener('click', function() {
+document.querySelector('.clear').addEventListener('click', function() {
   document.querySelectorAll('.col').forEach(function(colStyle) {
     colStyle.className = 'col';
   });
 });
 
-document.getElementById('resize').addEventListener('click', function() {
+document.querySelector('.resize').addEventListener('click', function() {
   document.getElementById('modal').setAttribute('style', 'display: block');
 });
 
-document.getElementById('save').addEventListener('click', function() {
+document.querySelector('.save').addEventListener('click', function() {
 
   if (document.getElementById('size-input').value.match(/^[0-9]+$/) && document.getElementById('size-input').value >= 4 && document.getElementById('size-input').value <= 60) {
-    document.getElementById('error-message').setAttribute('style', 'display: none');
-    document.getElementById('grid').innerHTML = '';
+    document.querySelector('.error-message').setAttribute('style', 'display: none');
+    document.querySelector('.grid').innerHTML = '';
     createGrid();
     document.getElementById('modal').setAttribute('style', 'display: none');
   }
   else {
-    document.getElementById('error-message').setAttribute('style', 'display: block');
+    document.querySelector('.error-message').setAttribute('style', 'display: block');
   }
 });
 
-document.getElementById('cancel').addEventListener('click', function() {
+document.querySelector('.cancel').addEventListener('click', function() {
   document.getElementById('modal').setAttribute('style', 'display: none');
 });
 

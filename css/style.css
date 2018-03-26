@@ -100,7 +100,7 @@ button:hover {
   max-width: 50px;
 }
 
-#error-message {
+.error-message {
   background-color: #fcf8e3;
   border: 1px solid #faebcc;
   color: #8a6d3b;
@@ -116,7 +116,7 @@ button:hover {
   text-align: right;
 }
 
-#grid {
+.grid {
   margin: 15px auto 30px;
 }
 
