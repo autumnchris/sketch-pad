@@ -38,29 +38,29 @@ document.querySelector('.clear').addEventListener('click', function() {
 });
 
 document.querySelector('.resize').addEventListener('click', function() {
-  document.getElementById('modal').setAttribute('style', 'display: block');
+  document.getElementById('modal').style.display = 'block';
 });
 
 document.querySelector('.save').addEventListener('click', function() {
 
   if (document.getElementById('size-input').value.match(/^[0-9]+$/) && document.getElementById('size-input').value >= 4 && document.getElementById('size-input').value <= 60) {
-    document.querySelector('.error-message').setAttribute('style', 'display: none');
+    document.querySelector('.error-message').style.display = 'none';
     document.querySelector('.grid').innerHTML = '';
     createGrid();
-    document.getElementById('modal').setAttribute('style', 'display: none');
+    document.getElementById('modal').style.display = 'none';
   }
   else {
-    document.querySelector('.error-message').setAttribute('style', 'display: block');
+    document.querySelector('.error-message').style.display = 'block';
   }
 });
 
 document.querySelector('.cancel').addEventListener('click', function() {
-  document.getElementById('modal').setAttribute('style', 'display: none');
+  document.getElementById('modal').style.display = 'none';
 });
 
 window.addEventListener('click', function(event) {
 
   if (event.target.id === 'modal') {
-    document.getElementById('modal').setAttribute('style', 'display: none');
+    document.getElementById('modal').style.display = 'none';
   }
 });
