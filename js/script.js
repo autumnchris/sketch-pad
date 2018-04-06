@@ -1,18 +1,20 @@
 function createGrid() {
-  var numOfSquares = document.getElementById('size-input').value;
-  var colSize = 400 / numOfSquares;
-  colSize = Math.round(colSize);
+  var row,
+  col,
+  i,
+  numOfSquares = document.getElementById('size-input').value,
+  colSize = Math.round(400 / numOfSquares);
 
-  for (var i = 0; i < numOfSquares; i++) {
-    var row = document.createElement('div');
+  for (i = 0; i < numOfSquares; i++) {
+    row = document.createElement('div');
     row.className = 'row';
     document.querySelector('.grid').appendChild(row);
   }
 
   document.querySelectorAll('.row').forEach(function(rows) {
 
-    for (var i = 0; i < numOfSquares; i++) {
-      var col = document.createElement('div');
+    for (i = 0; i < numOfSquares; i++) {
+      col = document.createElement('div');
       col.className = 'col';
       rows.appendChild(col);
     }
