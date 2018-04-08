@@ -41,6 +41,7 @@ h1 {
 }
 
 button,
+button:hover,
 button:active,
 button:focus {
   background-color: #006699;
@@ -51,11 +52,6 @@ button:focus {
   letter-spacing: 1px;
   margin: 0 3px;
   padding: 8px;
-}
-
-button:hover {
-  background-color: #fff;
-  color: #006699;
 }
 
 #modal {
