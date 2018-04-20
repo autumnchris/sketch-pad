@@ -45,7 +45,15 @@ h1 {
 button,
 button:hover,
 button:active,
-button:focus {
+button:focus,
+input[type=submit],
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=button],
+input[type=button]:hover,
+input[type=button]:active,
+input[type=button]:focus {
   background-color: #006699;
   border: 2px solid #006699;
   border-radius: 3px;
@@ -98,17 +106,17 @@ button:focus {
 }
 
 .modal-body {
-  padding: 25px;
+  padding: 15px;
 }
 
-.modal-body input {
+.modal-body #size-input {
   border: none;
   border-bottom: 1px solid #333;
   border-radius: 0;
   max-width: 50px;
 }
 
-.error-message {
+.modal-body .error-message {
   background-color: #fcf8e3;
   border: 1px solid #faebcc;
   color: #8a6d3b;
@@ -118,9 +126,8 @@ button:focus {
   width: 100%;
 }
 
-.modal-footer {
-  border-top: 1px solid #e6e6e6;
-  padding: 10px;
+.modal-body .button-group {
+  margin-top: 15px;
   text-align: right;
 }
 

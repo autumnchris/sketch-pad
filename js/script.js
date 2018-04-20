@@ -33,17 +33,8 @@ function createGrid() {
 
 createGrid();
 
-document.querySelector('.clear').addEventListener('click', () => {
-  document.querySelectorAll('.col').forEach(colStyle => {
-    colStyle.className = 'col';
-  });
-});
-
-document.querySelector('.resize').addEventListener('click', () => {
-  document.getElementById('modal').style.display = 'block';
-});
-
-document.querySelector('.save').addEventListener('click', () => {
+function resizeGrid(event) {
+  event.preventDefault();
 
   if (document.getElementById('size-input').value.match(/^[0-9]+$/) && document.getElementById('size-input').value >= 4 && document.getElementById('size-input').value <= 60) {
     document.querySelector('.error-message').style.display = 'none';
@@ -54,6 +45,20 @@ document.querySelector('.save').addEventListener('click', () => {
   else {
     document.querySelector('.error-message').style.display = 'block';
   }
+}
+
+document.querySelector('.clear').addEventListener('click', () => {
+  document.querySelectorAll('.col').forEach(colStyle => {
+    colStyle.className = 'col';
+  });
+});
+
+document.querySelector('.resize').addEventListener('click', () => {
+  document.getElementById('modal').style.display = 'block';
+});
+
+document.querySelector('.resize-form').addEventListener('submit', () => {
+  resizeGrid(event);
 });
 
 document.querySelector('.cancel').addEventListener('click', () => {
