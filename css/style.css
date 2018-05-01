@@ -1,45 +1,28 @@
-* {
-  box-sizing: border-box;
-}
-
 *:focus {
   box-shadow: 0 0 3px 3px rgba(65, 180, 250, 0.8);
-  outline: none !important;
-}
-
-a,
-a:visited,
-a:active,
-a:focus {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  outline: none;
 }
 
 html {
-  font-size: 10px;
-  height: 100%;
+  background: #fff;
+  background: linear-gradient(120deg, rgba(230, 247, 255, 0.3), #fff) fixed;
 }
 
 body {
-  background: #fff;
-  background: linear-gradient(120deg, rgba(230, 247, 255, 0.3), #fff) fixed;
-  color: #333;
-  font: 14px Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
-  min-height: 100%;
-  padding: 2% 20px 40px;
-  position: relative;
   text-align: center;
 }
 
 h1 {
   color: #006699;
   font-family: "Sue Ellen Francisco", monospace;
+  font-size: 1.8rem;
   letter-spacing: 4px;
+  padding: 30px 0;
   text-transform: uppercase;
+}
+
+main {
+  padding-bottom: 80px;
 }
 
 button,
@@ -54,23 +37,22 @@ input[type=button],
 input[type=button]:hover,
 input[type=button]:active,
 input[type=button]:focus {
-  background-color: #006699;
-  border: 2px solid #006699;
+  background: #006699;
   border-radius: 3px;
   color: #fff;
-  cursor: pointer;
-  letter-spacing: 1px;
   margin: 0 3px;
-  padding: 8px;
+  padding: 10px;
 }
 
 #modal {
-  background-color: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 0;
   display: none;
   height: 100%;
   left: 0;
   overflow: auto;
   position: fixed;
+  right: 0;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -78,10 +60,10 @@ input[type=button]:focus {
 
 .modal-content {
   animation: slideIn 0.3s ease-out;
-  background-color: #fff;
+  background: #fff;
   border-radius: 5px;
   margin: 10% auto;
-  max-width: 400px;
+  max-width: 350px;
   width: 70%;
 }
 
@@ -96,13 +78,13 @@ input[type=button]:focus {
 
 .modal-header {
   border-bottom: 1px solid #e6e6e6;
-  padding: 2px 10px;
-  text-align: left;
+  padding: 10px;
 }
 
 .modal-header h2 {
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   font-weight: 300;
+  text-align: left;
 }
 
 .modal-body {
@@ -110,17 +92,16 @@ input[type=button]:focus {
 }
 
 .modal-body #size-input {
-  border: none;
   border-bottom: 1px solid #333;
-  border-radius: 0;
   max-width: 50px;
 }
 
 .modal-body .error-message {
-  background-color: #fcf8e3;
+  background: #fcf8e3;
   border: 1px solid #faebcc;
   color: #8a6d3b;
   display: none;
+  line-height: 20px;
   margin: 20px 0;
   padding: 15px 0;
   width: 100%;
@@ -133,6 +114,7 @@ input[type=button]:focus {
 
 .grid {
   border-collapse: collapse;
+  border-spacing: 0;
   display: table;
   margin: 15px auto 30px;
 }
@@ -148,19 +130,17 @@ input[type=button]:focus {
 }
 
 .shaded-col {
-  background-color: #333;
+  background: #333;
   border: 1px solid #333;
 }
 
 footer {
-  background-color: #e6e6e6;
-  background-color: rgba(102, 204, 255, 0.2);
+  background: rgba(102, 204, 255, 0.2);
   bottom: 0;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   left: 0;
   letter-spacing: 2px;
-  margin: 0;
-  padding: 12px 0;
+  padding: 14px 0;
   position: absolute;
   right: 0;
   width: 100%;

@@ -9,7 +9,6 @@ My project for the [Etch-a-Sketch assignment](https://www.theodinproject.com/cou
 * CSS3
 * HTML5
 * LocalStorage
-* [Normalize.css](http://necolas.github.io/normalize.css)
 * [Google Fonts](https://fonts.google.com)
 
 ## Demo
