@@ -9,6 +9,7 @@ My project for the [Etch-a-Sketch assignment](https://www.theodinproject.com/cou
 * CSS3
 * HTML5
 * LocalStorage
+* [Font Awesome](https://fontawesome.com)
 * [Google Fonts](https://fonts.google.com)
 
 ## Demo
