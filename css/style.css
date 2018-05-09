@@ -8,10 +8,6 @@ html {
   background: linear-gradient(120deg, rgba(230, 247, 255, 0.3), #fff) fixed;
 }
 
-body {
-  text-align: center;
-}
-
 h1 {
   color: #006699;
   font-family: "Sue Ellen Francisco", monospace;
@@ -89,6 +85,10 @@ input[type=button]:focus {
 
 .modal-body {
   padding: 15px;
+}
+
+.modal-body .form-group {
+  text-align: left;
 }
 
 .modal-body #size-input {
