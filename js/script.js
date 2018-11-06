@@ -3,21 +3,16 @@ let numOfSquares = JSON.parse(localStorage.getItem('gridSize')) || 16;
 function createGrid() {
   let row;
   let col;
-  let i;
   const colSize = Math.round(400 / numOfSquares);
 
-  for (i = 0; i < numOfSquares; i++) {
-    row = document.createElement('div');
-    row.className = 'row';
-    document.querySelector('.grid').appendChild(row);
+  for (row = 0; row < numOfSquares; row++) {
+    document.querySelector('.grid').appendChild(document.createElement('div')).className = 'row';
   }
 
   document.querySelectorAll('.row').forEach(rows => {
 
-    for (i = 0; i < numOfSquares; i++) {
-      col = document.createElement('div');
-      col.className = 'col';
-      rows.appendChild(col);
+    for (col = 0; col < numOfSquares; col++) {
+      rows.appendChild(document.createElement('div')).className = 'col';
     }
   });
 
