@@ -6,12 +6,25 @@ My project for the [Etch-a-Sketch assignment](https://www.theodinproject.com/cou
 
 ## Built With
 * JavaScript
-* CSS3
+* [Sass](http://sass-lang.com)
 * HTML5
+* [Webpack](https://webpack.js.org)
 * LocalStorage
+* [Babel](https://babeljs.io)
+* [Normalize.css](https://necolas.github.io/normalize.css)
 * [Font Awesome](https://fontawesome.com)
 * [Google Fonts](https://fonts.google.com)
 
 ## Demo
 
 View project demo at [https://autumnchris.github.io/sketch-pad](https://autumnchris.github.io/sketch-pad).
+
+## Installation
+
+```
+$ git clone https://github.com/autumnchris/sketch-pad.git
+$ cd sketch-pad
+$ npm install
+$ npm start
+```
+Go to `http://localhost:8080`.

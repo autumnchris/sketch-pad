@@ -6,50 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="public/style.css">
   </head>
 
   <body>
-    <!-- HEADER -->
-    <header>
-      <h1>Sketch Pad</h1>
-    </header>
-    <main>
-      <!-- BUTTONS -->
-      <div class="button-group">
-        <button type="button" class="clear">Clear</button>
-        <button type="button" class="resize">Resize</button>
-      </div>
-      <!-- MODAL -->
-      <div id="modal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2>Resize Grid</h2>
-          </div>
-          <div class="modal-body">
-            <form class="resize-form">
-              <div class="form-group">
-                <label for="size-input">Grid size:</label>
-                <input type="text" value="16" id="size-input" required>
-              </div>
-              <!-- ERROR MESSAGE -->
-              <p class="message error-message"><span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Please enter a number between 4 and 80.</p>
-              <div class="button-group">
-                <input type="submit" value="Save">
-                <input type="button" class="cancel" value="Cancel">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- SKETCH GRID -->
-      <div class="grid"></div>
-      <!-- GRID SIZE -->
-      <p class="grid-size"></p>
-    </main>
-    <!-- FOOTER -->
-    <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; <span class="current-year"></span></footer>
-    <script src="js/script.js"></script>
+    <div id="app"></div>
+    <script src="public/bundle.js"></script>
+    <noscript>
+      <p class="message info-message"><span class="fa fa-info-circle fa-lg fa-fw"></span> This site uses JavaScript. Please enable JavaScript in your browser.</p>
+    </noscript>
   </body>
 </html>
