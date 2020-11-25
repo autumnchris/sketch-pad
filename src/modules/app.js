@@ -17,7 +17,7 @@ const App = (() => {
     </main>
     <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; ${new Date().getFullYear()}</footer>`;
 
-    SketchGrid.renderSketchGrid(JSON.parse(localStorage.getItem('gridSize')) || 16);
+    SketchGrid.renderSketchGrid(SketchGrid.renderGridSize());
 
     document.addEventListener('click', event => {
        const element = event.target;

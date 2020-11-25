@@ -2,6 +2,11 @@ import { SettingsModal } from './settings-modal';
 
 const SketchGrid = (() => {
 
+  function renderGridSize(gridSize) {
+    gridSize ? localStorage.setItem('gridSize', JSON.stringify(Number(gridSize))) : null;
+    return JSON.parse(localStorage.getItem('gridSize')) || 16;
+  }
+
   function createGrid(gridSize) {
     const squareSize = Math.round(400 / gridSize);
     const newGrid = new Array(gridSize * gridSize).fill('');
@@ -27,6 +32,7 @@ const SketchGrid = (() => {
   }
 
   return {
+    renderGridSize,
     renderSketchGrid,
     clearSketchGrid
   };

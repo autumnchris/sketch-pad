@@ -1,7 +1,6 @@
 import { SketchGrid } from './sketch-grid';
 
 const SettingsModal = (() => {
-  let gridSize = JSON.parse(localStorage.getItem('gridSize')) || 16;
 
   function openSettingsModal() {
     const settingsModal = document.createElement('div');
@@ -13,7 +12,7 @@ const SettingsModal = (() => {
         <form class="resize-form">
           <div class="form-group">
             <label for="size-input">Pixels:</label>
-            <input type="text" value="${gridSize}" id="size-input" required />
+            <input type="text" value="${SketchGrid.renderGridSize()}" id="size-input" required />
           </div>
           <div class="button-group">
             <input type="submit" class="button modal-button" value="Save" />
@@ -31,14 +30,12 @@ const SettingsModal = (() => {
     settingsModal ? document.querySelector('main').removeChild(settingsModal) : null;
   }
 
-  function resizeGrid(event, newGridSize) {
+  function resizeGrid(event, gridSize) {
     event.preventDefault();
     removeFormErrorMessage();
 
-    if (!isNaN(newGridSize) && newGridSize >= 16 && newGridSize <= 100) {
-      gridSize = newGridSize;
-      SketchGrid.renderSketchGrid(newGridSize);
-      localStorage.setItem('gridSize', JSON.stringify(newGridSize));
+    if (!isNaN(gridSize) && gridSize >= 16 && gridSize <= 100) {
+      SketchGrid.renderSketchGrid(SketchGrid.renderGridSize(gridSize));
       closeSettingsModal();
     }
     else {
