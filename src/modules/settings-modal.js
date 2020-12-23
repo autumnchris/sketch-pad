@@ -46,7 +46,7 @@ const SettingsModal = (() => {
   function renderFormErrorMessage() {
     const errorMessage = document.createElement('p');
     errorMessage.classList.add('message', 'error-message');
-    errorMessage.innerHTML = `<span class="fa fa-exclamation-circle fa-lg fa-fw"></span>Please enter a number between 16 and 100.`;
+    errorMessage.innerHTML = `<span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Please enter a number between 16 and 100.`;
 
     document.querySelector('.modal-body').appendChild(errorMessage);
   }
