@@ -1,7 +1,7 @@
 {
   "name": "sketch-pad",
   "version": "1.0.0",
-  "description": "My project for the Etch-a-Sketch assignment as part of the curriculum for the Web Development 101 course on The Odin Project.",
+  "description": "A JavaScript app that allows the user to sketch within a custom-sized canvas by hovering with the cursor.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
