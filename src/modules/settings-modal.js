@@ -9,10 +9,10 @@ const SettingsModal = (() => {
     settingsModal.innerHTML = `<div class="modal-content">
       <div class="modal-header">Resize Grid</div>
       <div class="modal-body">
-        <form class="resize-form">
+        <form class="resize-form" novalidate>
           <div class="form-group">
             <label for="size-input">Pixels:</label>
-            <input type="text" value="${SketchGrid.renderGridSize()}" id="size-input" required />
+            <input type="text" value="${SketchGrid.renderGridSize()}" id="size-input" />
           </div>
           <div class="button-group">
             <input type="submit" class="button modal-button" value="Save" />
@@ -35,6 +35,7 @@ const SettingsModal = (() => {
     removeFormErrorMessage();
 
     if (!isNaN(gridSize) && gridSize >= 16 && gridSize <= 100) {
+      if (Math.floor(gridSize) !== gridSize) gridSize = Math.floor(gridSize);
       SketchGrid.renderSketchGrid(SketchGrid.renderGridSize(gridSize));
       closeSettingsModal();
     }
