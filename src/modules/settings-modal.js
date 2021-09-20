@@ -34,7 +34,7 @@ const SettingsModal = (() => {
     event.preventDefault();
     removeFormErrorMessage();
 
-    if (!isNaN(gridSize) && gridSize >= 16 && gridSize <= 100) {
+    if (!isNaN(gridSize) && gridSize >= 16 && gridSize < 101) {
       if (Math.floor(gridSize) !== gridSize) gridSize = Math.floor(gridSize);
       SketchGrid.renderSketchGrid(SketchGrid.renderGridSize(gridSize));
       closeSettingsModal();
@@ -47,7 +47,7 @@ const SettingsModal = (() => {
   function renderFormErrorMessage() {
     const errorMessage = document.createElement('p');
     errorMessage.classList.add('message', 'error-message');
-    errorMessage.innerHTML = `<span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Please enter a number between 16 and 100.`;
+    errorMessage.innerHTML = `<span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Please enter a number that is greater than 15 and less than 101.`;
 
     document.querySelector('.modal-body').appendChild(errorMessage);
   }
