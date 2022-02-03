@@ -12,11 +12,11 @@ const SettingsModal = (() => {
         <form class="resize-form" novalidate>
           <div class="form-group">
             <label for="size-input">Pixels:</label>
-            <input type="text" value="${SketchGrid.renderGridSize()}" id="size-input" />
+            <input type="text" value="${SketchGrid.renderGridSize()}" inputmode="numeric" id="size-input" required />
           </div>
           <div class="button-group">
-            <input type="submit" class="button modal-button" value="Save" />
-            <input type="button" class="button modal-button cancel" value="Cancel" />
+            <button type="submit" class="button modal-button">Save</button>
+            <button type="button" class="button modal-button cancel">Cancel</button>
           </div>
         </form>
       </div>
