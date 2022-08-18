@@ -1,0 +1,56 @@
+// STYLES FOR PAGE'S MAIN CONTENT
+
+// Button styles
+.button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button,
+.button:visited,
+.button:hover,
+.button:active,
+.button:focus {
+  background: $blue;
+  border: 0;
+  border-radius: 4px;
+  color: change-color($black, $lightness: 100%);
+  cursor: pointer;
+  letter-spacing: 1px;
+  line-height: normal;
+  padding: 10px;
+  width: auto;
+  &:hover {
+    background: change-color($blue, $lightness: 27%);
+    text-decoration: none;
+  }
+}
+
+.grid-buttons {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  .button,
+  .button:hover,
+  .button:active,
+  .button:focus {
+    color: change-color($black, $lightness: 90%);
+    margin: 0 4px;
+  }
+}
+
+// Grid styles
+.grid {
+  -webkit-box-shadow: 2px 2px 20px change-color($black, $lightness: 80%);
+  box-shadow: 2px 2px 20px change-color($black, $lightness: 80%);
+  display: -ms-inline-grid;
+  display: inline-grid;
+  margin: 15px auto;
+  .square {
+    background: change-color($black, $lightness: 100%);
+  }
+  .square.shaded-square {
+    background: change-color($black, $lightness: 20%);
+  }
+}
