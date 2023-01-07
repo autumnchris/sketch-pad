@@ -1,5 +1,3 @@
-import { SettingsModal } from './settings-modal';
-
 const SketchGrid = (() => {
 
   function renderGridSize(gridSize) {

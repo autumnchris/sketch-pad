@@ -1,4 +1,4 @@
-import { SketchGrid } from './sketch-grid';
+import { SketchGrid } from './SketchGrid';
 
 const SettingsModal = (() => {
 

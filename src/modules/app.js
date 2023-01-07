@@ -1,5 +1,5 @@
-import { SketchGrid } from './sketch-grid';
-import { SettingsModal } from './settings-modal';
+import { SketchGrid } from './SketchGrid';
+import { SettingsModal } from './SettingsModal';
 
 const App = (() => {
 
