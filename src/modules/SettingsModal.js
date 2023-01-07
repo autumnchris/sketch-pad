@@ -23,11 +23,13 @@ const SettingsModal = (() => {
     </div>`;
 
     document.querySelector('main').insertBefore(settingsModal, document.querySelector('.grid-container'));
+    document.querySelector('body').classList.add('modal-open');
   }
 
   function closeSettingsModal() {
     const settingsModal = document.getElementById('modal');
     settingsModal ? document.querySelector('main').removeChild(settingsModal) : null;
+    document.querySelector('body').classList.remove('modal-open');
   }
 
   function resizeGrid(event, gridSize) {
