@@ -32,6 +32,10 @@ class App {
         const element = event.target;
         element.matches('.grid .square') ? event.target.className = 'square shaded-square' : null;
       });
+
+      document.addEventListener('keydown', event => {
+        document.querySelector('#modal') && event.key === 'Escape' ? this.settingsModal.removeSettingsModal('main'): null;
+      });
     }
 
   // DOM methods
