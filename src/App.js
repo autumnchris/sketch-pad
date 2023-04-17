@@ -1,7 +1,8 @@
-import Header from "./modules/Header";
-import Footer from "./modules/Footer";
-import SketchGrid from "./modules/SketchGrid";
-import SettingsModal  from "./modules/SettingsModal";
+import Header from './modules/Header';
+import Footer from './modules/Footer';
+import SketchGrid from './modules/SketchGrid';
+import SettingsModal  from './modules/SettingsModal';
+import getGridSize from './utils/getGridSize';
 
 class App {
   constructor() {
@@ -43,7 +44,7 @@ class App {
     this.header.renderHeader('#app');
     this.renderMain('#app');
     this.footer.renderFooter('#app');
-    this.sketchGrid.renderSketchGrid(this.settingsModal.gridSize, 'main');
+    this.sketchGrid.renderSketchGrid(getGridSize(), 'main');
   }
 
   renderMain(location) {

@@ -1,30 +1,28 @@
-import SketchGrid from "./SketchGrid";
-import ErrorMessage from "./ErrorMessage";
-import getLocalStorage from "../utils/getLocalStorage";
-import setToLocalStorage from "../utils/setToLocalStorage";
+import SketchGrid from './SketchGrid';
+import ErrorMessage from './ErrorMessage';
+import getGridSize from '../utils/getGridSize';
 
 class SettingsModal {
   constructor() {
-    this.gridSize = getLocalStorage('gridSize') || 16;
     this.sketchGrid = new SketchGrid();
     this.errorMessage = new ErrorMessage();
   }
 
   handleSubmit(event, gridSize) {
     event.preventDefault();
-    this.errorMessage.removeErrorMessage('.resize-form');
+    this.errorMessage.removeErrorMessage('#modal .modal-body');
     gridSize = Number(gridSize);
 
     if (!isNaN(gridSize) && gridSize >= 16 && gridSize < 101) {
       if (Math.floor(gridSize) !== gridSize) gridSize = Math.floor(gridSize);
       this.gridSize = gridSize;
-      setToLocalStorage('gridSize', gridSize);
+      getGridSize(gridSize);
       this.sketchGrid.removeSketchGrid('main');
       this.sketchGrid.renderSketchGrid(gridSize, 'main');
       this.removeSettingsModal('main')
     }
     else {
-      this.errorMessage.renderErrorMessage('Please enter a number that is greater than 15 and less than 101.', '.resize-form');
+      this.errorMessage.renderErrorMessage('Please enter a number that is greater than 15 and less than 101.', '#modal .modal-body');
     }
   }
 
@@ -40,7 +38,7 @@ class SettingsModal {
           <form class="resize-form" novalidate>
             <div class="form-group">
               <label for="size-input">Pixels:</label>
-              <input type="text" value="${this.gridSize}" inputmode="numeric" id="size-input" required />
+              <input type="text" value="${getGridSize()}" inputmode="numeric" id="size-input" required />
             </div>
             <div class="button-group">
               <button type="submit" class="button modal-button">Save</button>
