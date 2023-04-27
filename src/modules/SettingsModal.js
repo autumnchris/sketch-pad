@@ -15,7 +15,6 @@ class SettingsModal {
 
     if (!isNaN(gridSize) && gridSize >= 16 && gridSize < 101) {
       if (Math.floor(gridSize) !== gridSize) gridSize = Math.floor(gridSize);
-      this.gridSize = gridSize;
       getGridSize(gridSize);
       this.sketchGrid.removeSketchGrid('main');
       this.sketchGrid.renderSketchGrid(gridSize, 'main');
