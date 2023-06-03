@@ -11,7 +11,6 @@ class App {
     this.sketchGrid = new SketchGrid();
     this.settingsModal = new SettingsModal();
     this.renderApp();
-    this.events();
   }
 
     // Event listeners
@@ -45,6 +44,7 @@ class App {
     this.renderMain('#app');
     this.footer.renderFooter('#app');
     this.sketchGrid.renderSketchGrid(getGridSize(), 'main');
+    this.events();
   }
 
   renderMain(location) {
