@@ -2,7 +2,7 @@
 
 A JavaScript app that allows the user to sketch within a custom-sized canvas by hovering with the cursor.
 
-Inspired by the [Etch-a-Sketch assignment](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project) as part of the curriculum for the [Foundations course](https://www.theodinproject.com/paths/foundations/courses/foundations) on [The Odin Project](https://www.theodinproject.com).
+Inspired by the [Etch-a-Sketch assignment](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project) as part of the curriculum for the [Foundations Course](https://www.theodinproject.com/paths/foundations/courses/foundations) on [The Odin Project](https://www.theodinproject.com).
 
 ---
 
