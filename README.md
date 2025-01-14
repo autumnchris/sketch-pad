@@ -7,8 +7,10 @@ Inspired by the [Etch-a-Sketch assignment](https://www.theodinproject.com/paths/
 ---
 
 ## Built With
+* Vanilla JS
 * JavaScript
 * [Sass](http://sass-lang.com)
+* CSS3
 * HTML5
 * [Webpack](https://webpack.js.org)
 * LocalStorage
