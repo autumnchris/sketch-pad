@@ -12,6 +12,7 @@ Inspired by the [Etch-a-Sketch assignment](https://www.theodinproject.com/paths/
 * [Sass](http://sass-lang.com)
 * CSS3
 * HTML5
+* [Node.js](https://nodejs.org/en)
 * [Webpack](https://webpack.js.org)
 * LocalStorage
 * [Babel](https://babeljs.io)
