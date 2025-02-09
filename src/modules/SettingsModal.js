@@ -37,7 +37,7 @@ class SettingsModal {
           <form class="resize-form" novalidate>
             <div class="form-group">
               <label for="size-input">Pixels:</label>
-              <input type="text" value="${getGridSize()}" inputmode="numeric" id="size-input" required />
+              <input type="text" name="sizeInput" value="${getGridSize()}" inputmode="numeric" id="size-input" autocomplete="off" required />
             </div>
             <div class="button-group">
               <button type="submit" class="button modal-button">Save</button>
