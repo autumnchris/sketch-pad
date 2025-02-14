@@ -51,8 +51,8 @@ class App {
     const main = document.createElement('main');
     main.innerHTML = `
       <div class="button-group grid-buttons">
-        <button type="button" class="button clear-button">Clear</button>
-        <button type="button" class="button resize-button">Resize</button>
+        <button type="button" class="button clear-button" aria-label="Clear sketch grid">Clear</button>
+        <button type="button" class="button resize-button" aria-label="Resize sketch grid">Resize</button>
       </div>
     `;
     document.querySelector(location).appendChild(main);
