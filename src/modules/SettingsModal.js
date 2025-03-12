@@ -1,10 +1,9 @@
-import SketchGrid from './SketchGrid';
 import ErrorMessage from './ErrorMessage';
 import getGridSize from '../utils/getGridSize';
 
 class SettingsModal {
-  constructor() {
-    this.sketchGrid = new SketchGrid();
+  constructor(sketchGridInstance) {
+    this.sketchGrid = sketchGridInstance;
     this.errorMessage = new ErrorMessage();
   }
 
@@ -18,7 +17,7 @@ class SettingsModal {
       getGridSize(gridSize);
       this.sketchGrid.removeSketchGrid('main');
       this.sketchGrid.renderSketchGrid(gridSize, 'main');
-      this.removeSettingsModal('main')
+      this.removeSettingsModal('main');
     }
     else {
       this.errorMessage.renderErrorMessage('Please enter a number that is greater than 15 and less than 101.', '#modal .modal-body');

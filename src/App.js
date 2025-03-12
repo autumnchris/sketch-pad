@@ -9,7 +9,7 @@ class App {
     this.header = new Header();
     this.footer = new Footer();
     this.sketchGrid = new SketchGrid();
-    this.settingsModal = new SettingsModal();
+    this.settingsModal = new SettingsModal(this.sketchGrid);
     this.renderApp();
   }
 
